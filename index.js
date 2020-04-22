@@ -34,7 +34,6 @@ export default class flowtype {
             if (parent) {
                 parent = document.querySelector(parent);
             }
-            console.log(parent);
             var elms = document.querySelectorAll(selector);
             elms = Array.from(elms);
             elms.forEach((el) => {
@@ -53,7 +52,6 @@ export default class flowtype {
             minimum,
         } = this.settings;
         var {offsetWidth} = parent || el;
-        console.log(offsetWidth);
         var width = offsetWidth > maximum ? maximum : offsetWidth < minimum ? minimum : offsetWidth;
         var fontBase = width / fontRatio;
         var fontSize = fontBase > maxFont ? maxFont : fontBase < minFont ? minFont : fontBase;
